@@ -10,7 +10,7 @@ on:
         - shop
 
 jobs:
-  rucadelicshop_checkstyle:
+  shop_checkstyle:
     runs-on: ubuntu-latest
     steps:
       - name: Git clone repo
