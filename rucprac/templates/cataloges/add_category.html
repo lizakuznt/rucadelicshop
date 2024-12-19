@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Categories{% endblock %}
+{% block nav %}{% include 'inc/_nav.html' %}{% endblock %}
+{% block content %}
+  <form method="post">
+  {% csrf_token %}
+  {{ form.as_div }}
+  <button type="submit">Добавить</button>
+  </form>
+{% endblock %}

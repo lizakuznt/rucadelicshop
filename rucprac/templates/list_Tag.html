@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Category Products{% endblock %}
+{% block nav %}{% include 'inc/_nav.html' %}{% endblock %}
+{% block content %}
+    <h1>Категория: {{ category.name_category }}</h1>
+    <h2>Товары в этой категории:</h2>
+    <div class = "card" style=" ">
+        <img src="{{ products.img_product.url }}" class="card-img-top"alt="...">
+        <div class= "card-body">
+             <h5 class="card-title">{{ product.name_product }}</h5>
+             <p> class="card-text">{{ products.description_product }}</p>
+            <a> href="{% url 'view_product' products.pk %}" class="btn btn-primary">view product </a>
+        </div>
+    </div>
+{% endblock %}
